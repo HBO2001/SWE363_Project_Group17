@@ -111,3 +111,7 @@ form {
   line-height: normal;
   color: #f26101;
 }
+
+.main-img img {
+  height: 100vh;
+}
