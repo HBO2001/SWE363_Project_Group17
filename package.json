@@ -1,0 +1,19 @@
+{
+  "name": "swe363-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "node": "^21.2.0",
+    "nodemon": "^3.0.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}
