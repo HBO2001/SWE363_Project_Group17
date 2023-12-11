@@ -19,7 +19,6 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 5em;
 }
 
 li {
@@ -28,11 +27,12 @@ li {
 
 .nav-links a {
   color: black;
-  font-size: 1.2em;
+  font-size: 2em;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  margin-left: 2em;
 }
 
 .nav-buttons {
@@ -152,8 +152,12 @@ header svg {
 
   .nav-links {
     flex-direction: column;
-    margin-top: 3em;
+    margin-top: 2em;
     padding-left: 0;
+  }
+
+  .nav-links a {
+    margin-bottom: 5em;
   }
 
   .nav-buttons {
