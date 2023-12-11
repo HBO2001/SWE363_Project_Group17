@@ -11,11 +11,10 @@ body {
 }
 
 .navbar {
-  background: #d8e8f5;
-  padding: 1.5em 3em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 70%;
 }
 
 .nav-links {
@@ -23,9 +22,13 @@ body {
   gap: 5em;
 }
 
+li {
+  list-style: none;
+}
+
 .nav-links a {
   color: black;
-  font-size: 24px;
+  font-size: 1.2em;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -71,6 +74,16 @@ body {
   align-items: center;
 }
 
+.main-img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.main-img img {
+  height: 100vh;
+  object-fit: cover;
+}
+
 .main-container h1 {
   font-size: 36px;
   font-style: normal;
@@ -103,4 +116,126 @@ body {
   color: white;
   text-align: center;
   text-decoration: none;
+}
+
+header {
+  display: flex;
+  background: #d8e8f5;
+  padding: 0.5em 1.5em;
+  justify-content: space-between;
+}
+
+header svg {
+  width: 3em;
+  align-self: center;
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    justify-content: start;
+  }
+
+  .logo {
+    width: 100px;
+    object-fit: contain;
+  }
+
+  .main-img {
+    width: 100%;
+    max-height: 270px;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 3em;
+    padding-left: 0;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    margin-bottom: 5em;
+  }
+  .navbar {
+    position: fixed;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    z-index: 9999;
+    padding: 2em 2em;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    background-color: #a4bccf;
+  }
+
+  .open-nav {
+    transform: translateX(0%);
+  }
+
+  .close {
+    position: fixed;
+    right: 1em;
+  }
+
+  .heading-and-subheading {
+    max-width: 100vh;
+  }
+
+  .heading-and-subheading h1 {
+    font-size: 1.5em;
+  }
+
+  .heading-and-subheading p {
+    font-size: 1.2em;
+  }
+
+  .heading-and-subheading a {
+    min-width: 80%;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu {
+    display: none;
+  }
+  .close {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 1em;
+  }
+
+  .navbar {
+    gap: 1em;
+    justify-content: space-between;
+  }
+
+  .nav-buttons .sign-up-button {
+    max-width: 80px;
+    padding: 1em 0.8em;
+    border-radius: 10px;
+    border: 2px solid #003354;
+    color: #003354;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .nav-buttons .sign-in-button {
+    max-width: 80px;
+    padding: 1em 1em;
+    border-radius: 10px;
+    background: #003354;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
 }
