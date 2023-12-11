@@ -20,4 +20,8 @@ app.get("/sign-up", (req, res) => {
   res.render("sign-up");
 });
 
+app.get("/teams", (req, res) => {
+  res.render("teams");
+});
+
 app.listen(5000, () => {});
