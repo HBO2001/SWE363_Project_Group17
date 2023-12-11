@@ -7,21 +7,54 @@
     <link rel="stylesheet" href="/stylesheets/home.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo-container">
-        <img src="/images/logo.png" alt="logo" class="logo" />
-      </div>
-      <div class="nav-links">
-        <a href="./">Home</a>
-        <a href="#">Teams</a>
-        <a href="#">Members</a>
-      </div>
+    <div class="nav-wrapper">
+      <header>
+        <div class="logo-container">
+          <img src="/images/logo.png" alt="logo" class="logo" />
+        </div>
+        <nav class="navbar">
+          <svg
+            class="close"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.00007 9.414L13.6571 15.071C13.8457 15.2532 14.0983 15.354 14.3605 15.3517C14.6227 15.3494 14.8735 15.2442 15.0589 15.0588C15.2443 14.8734 15.3495 14.6226 15.3517 14.3604C15.354 14.0982 15.2532 13.8456 15.0711 13.657L9.41407 8L15.0711 2.343C15.2532 2.1544 15.354 1.9018 15.3517 1.6396C15.3495 1.3774 15.2443 1.12659 15.0589 0.941182C14.8735 0.755774 14.6227 0.650605 14.3605 0.648327C14.0983 0.646048 13.8457 0.746842 13.6571 0.929L8.00007 6.586L2.34307 0.929C2.15362 0.751345 1.90248 0.654366 1.6428 0.658583C1.38311 0.6628 1.13526 0.767882 0.951677 0.951594C0.768094 1.13531 0.663187 1.38324 0.659154 1.64292C0.655121 1.90261 0.752278 2.15368 0.930067 2.343L6.58607 8L0.929067 13.657C0.833557 13.7492 0.757375 13.8596 0.704966 13.9816C0.652557 14.1036 0.624971 14.2348 0.623817 14.3676C0.622663 14.5004 0.647965 14.6321 0.698246 14.755C0.748526 14.8779 0.82278 14.9895 0.916672 15.0834C1.01057 15.1773 1.12222 15.2515 1.24511 15.3018C1.36801 15.3521 1.49969 15.3774 1.63247 15.3763C1.76525 15.3751 1.89647 15.3475 2.01847 15.2951C2.14048 15.2427 2.25082 15.1665 2.34307 15.071L8.00007 9.414Z"
+              fill="black"
+            />
+          </svg>
+          <ul class="nav-links">
+            <li><a href="./">Home</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Members</a></li>
+          </ul>
 
-      <div class="nav-buttons">
-        <a href="/sign-in" class="sign-in-button">Sign in</a>
-        <a href="/sign-up" class="sign-up-button">Sign up</a>
-      </div>
-    </nav>
+          <div class="nav-buttons">
+            <a href="/sign-in" class="sign-in-button">Sign in</a>
+            <a href="/sign-up" class="sign-up-button">Sign up</a>
+          </div>
+        </nav>
+
+        <svg
+          class="menu"
+          width="18"
+          height="16"
+          viewBox="0 0 18 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0H18V2H0V0ZM6 7H18V9H6V7ZM0 14H18V16H0V14Z"
+            fill="black"
+          />
+        </svg>
+      </header>
+    </div>
     <div class="main-container">
       <div class="heading-and-subheading">
         <h1>Simplifying Student Collaboration at KFUPM</h1>
@@ -40,5 +73,7 @@
         />
       </div>
     </div>
+
+    <script src="/javascripts/navbar.js"></script>
   </body>
 </html>
