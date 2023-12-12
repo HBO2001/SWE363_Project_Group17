@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitations</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link rel="stylesheet" href="/stylesheets/Invitations.css" />
+  </head>
+  <body>
+    <%- include("./partials/navbar") %>
+
+    <div class="main-container">
+      <%- include("./partials/profile-sidebar") %>
+
+      <div class="invitations-container">
+        <h1>You have invitations from</h1>
+
+        <%- include("./partials/invitation-card") %>
+      </div>
+    </div>
+  </body>
+</html>

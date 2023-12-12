@@ -24,6 +24,10 @@ app.get("/members/:id/team/:teamId", (req, res) => {
   res.render("my-team");
 });
 
+app.get("/members/:id/invitations", (req, res) => {
+  res.render("invitations");
+});
+
 app.get("/sign-in", (req, res) => {
   res.render("sign-in");
 });
