@@ -4,6 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
   </head>
-  <body></body>
+  <body>
+    <%- include("./partials/navbar") %>
+
+    <div class="main-container">
+      <%- include("./partials/profile-sidebar") %>
+      <div class="profile-info">
+        <form action="">
+          <div class="input-container">
+            <div class="label-input">
+              <label for="name">Name</label>
+              <input
+                type="name"
+                name="name"
+                id="name"
+                value="replace the value here with the real object value"
+              />
+            </div>
+            <div class="label-input">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value="replace the value here with the real object value"
+              />
+            </div>
+            <div class="label-input">
+              <label for="major">Major</label>
+              <input
+                type="major"
+                name="major"
+                id="major"
+                value="replace the value here with the real object value"
+              />
+            </div>
+          </div>
+          <div class="button-container">
+            <button>Edit profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

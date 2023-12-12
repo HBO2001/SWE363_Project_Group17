@@ -12,12 +12,12 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/members", (req, res) => {
-  res.render("members");
+app.get("/members/:id", (req, res) => {
+  res.render("profile");
 });
 
-app.get("/members/:id", (req, res) => {
-  res.send(req.params);
+app.get("/members", (req, res) => {
+  res.render("members");
 });
 
 app.get("/sign-in", (req, res) => {
