@@ -40,4 +40,8 @@ app.get("/teams", (req, res) => {
   res.render("teams");
 });
 
+app.get("/create-team", (req, res) => {
+  res.render("create-team");
+});
+
 app.listen(5000, () => {});

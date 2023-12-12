@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/create-team.css" />
+  </head>
+  <body>
+    <%- include("./partials/navbar") %>
+    <div class="main-container">
+      <div class="fields-and-links">
+        <h1>Create your team</h1>
+        <form action="">
+          <div class="fields">
+            <div class="label-input">
+              <label for="teamName">Team Name</label>
+              <input type="text" name="teamName" id="teamName" />
+            </div>
+
+            <div class="label-input">
+              <label for="ideas">Current Ideas</label>
+              <textarea
+                class="ideas"
+                name="ideas"
+                id="ideas"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+          </div>
+          <form action="">
+            <button class="create-team-button">Create Team</button>
+          </form>
+        </form>
+      </div>
+
+      <div class="main-img">
+        <img
+          src="/images/team-working.png"
+          alt="team working"
+          class="main-img"
+        />
+      </div>
+    </div>
+    <script src="/javascripts/navbar.js"></script>
+  </body>
+</html>
