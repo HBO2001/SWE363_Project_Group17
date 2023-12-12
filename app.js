@@ -44,4 +44,11 @@ app.get("/create-team", (req, res) => {
   res.render("create-team");
 });
 
+app.get("/admin", (req, res) => {
+  res.render("admin-profile");
+});
+
+app.get("/dashboard", (req, res) => {
+  res.render("admin-dashboard");
+});
 app.listen(5000, () => {});

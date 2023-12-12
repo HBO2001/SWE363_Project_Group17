@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    <link rel="stylesheet" href="/stylesheets/admin-dashboard.css" />
+  </head>
+  <body>
+    <%- include("./partials/navbar") %>
+    <div class="main-container">
+      <%- include("./partials/admin-sidebar") %>
+      <div class="profile-info">
+        <div class="inner-container">
+          <div class="stats-container">
+            <h2>Total number of teams</h2>
+            <div>
+              <h1 class="stats">100</h1>
+            </div>
+          </div>
+          <div class="stats-container">
+            <h2>Total number of members</h2>
+            <div>
+              <h1 class="stats">100</h1>
+            </div>
+          </div>
+          <div class="stats-container">
+            <h2>Number of completed teams</h2>
+
+            <div>
+              <h1 class="stats">100</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
