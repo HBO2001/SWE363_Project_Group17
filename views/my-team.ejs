@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Team</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link rel="stylesheet" href="/stylesheets/my-team.css" />
+  </head>
+  <body>
+    <%- include("./partials/navbar") %>
+
+    <div class="main-container">
+      <%- include("./partials/profile-sidebar") %>
+
+      <div class="team-container">
+        <div class="team-info">
+          <div>
+            <h1>The name of the team goes here</h1>
+
+            <h2>Members:</h2>
+            <ul class="members-names">
+              <!-- Should be a for loop here when passing the team object -->
+              <li>Ahmed ahmed ahmed</li>
+              <li>Ahmed Ahmed Ahmed</li>
+              <li>Ahmed Ahmed Ahmed</li>
+              <li>Ahmed Ahmed Ahmed</li>
+            </ul>
+          </div>
+
+          <div class="meetings-container">
+            <h1>Upcoming meetings</h1>
+            <div class="meeting-card">
+              <h3>Subject of the meeting</h3>
+              <h3>Date</h3>
+              <h3>Time</h3>
+            </div>
+          </div>
+        </div>
+        <div class="team-buttons">
+          <a href="" class="new-meeting-button">New Meeting</a>
+          <form action="">
+            <button class="leave-team-button">Leave this team?</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
