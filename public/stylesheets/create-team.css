@@ -358,3 +358,33 @@ header svg {
   cursor: pointer;
   outline: none;
 }
+
+@media screen and (max-width: 700px) {
+  .main-container {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+  .main-img {
+    width: 100%;
+    max-height: 270px;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  .fields-and-links {
+    width: 300px;
+    padding: 0.5em 1.5em;
+    margin: 0;
+  }
+
+  .fields-and-links h1 {
+  }
+
+  .fields-and-links input {
+    max-width: 27em;
+  }
+
+  .fields-and-links textarea {
+    max-width: 27em;
+  }
+}
