@@ -22,19 +22,22 @@
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/teams">Teams</a></li>
-        <li><a href="/members">Members</a></li>
+        <li><a href="/members">Students</a></li>
       </ul>
 
       <!-- currentUser should be passed in to check whether to display the buttons or not -->
-      <!-- <% //if (!currentUser) { %>  -->
+      <!-- <% //if (currentUser) { %>  -->
 
       <div class="nav-buttons">
         <a href="/sign-in" class="sign-in-button">Sign in</a>
         <a href="/sign-up" class="sign-up-button">Sign up</a>
       </div>
       <!-- <% //} else { %>
-        <h2>Welcome currentUser</h3>
+        
       <% //} %> -->
+
+      <a href="/members/profile">Profile</a>
+      <a href="/members/myTeams/">My Team</a>
     </nav>
 
     <svg

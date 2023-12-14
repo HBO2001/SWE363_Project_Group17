@@ -15,6 +15,8 @@
       %>
 
       <div class="team-container">
+        <!-- if (haveTeam) -->
+
         <div class="team-info">
           <div>
             <h1>The name of the team goes here</h1>
@@ -31,11 +33,21 @@
 
           <%- include("./partials/request-card") %>
         </div>
+        <div>
+          <h2>Description</h2>
+          <p>
+            <!-- <%= //description %> -->
+          </p>
+        </div>
         <div class="team-buttons">
           <form action="">
             <button class="leave-team-button">Leave this team?</button>
           </form>
         </div>
+        <!-- else error -->
+        <!-- <div>
+          <h1>You are not in a team yet</h1>
+        </div> -->
       </div>
     </div>
   </body>

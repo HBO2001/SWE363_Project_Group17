@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/members/:id", (req, res) => {
+app.get("/members/profile", (req, res) => {
   res.render("profile");
 });
 
@@ -20,7 +20,7 @@ app.get("/members", (req, res) => {
   res.render("members");
 });
 
-app.get("/members/:id/team/:teamId", (req, res) => {
+app.get("/members/myTeam", (req, res) => {
   res.render("my-team");
 });
 
@@ -36,7 +36,8 @@ app.get("/sign-up", (req, res) => {
   res.render("sign-up");
 });
 
-app.get("/teams", (req, res) => {
+app.get("/teams", async (req, res) => {
+  // get teams array
   res.render("teams");
 });
 
@@ -51,4 +52,4 @@ app.get("/admin", (req, res) => {
 app.get("/dashboard", (req, res) => {
   res.render("admin-dashboard");
 });
-app.listen(5000, () => {});
+app.listen(4000, () => {});
