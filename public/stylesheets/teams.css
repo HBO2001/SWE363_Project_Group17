@@ -122,3 +122,16 @@ body {
   text-align: center;
   text-decoration: none;
 }
+
+@media screen and (max-width: 700px) {
+  .buttons-wrapper {
+    flex-direction: column;
+  }
+
+  .team-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+}
