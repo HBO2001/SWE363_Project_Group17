@@ -89,3 +89,46 @@ form {
   text-align: center;
   text-decoration: none;
 }
+
+@media screen and (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .input-container {
+    grid-template-columns: 100%;
+  }
+
+  .input-container input {
+    max-width: 15em;
+  }
+
+  .sidebar {
+    display: flex;
+    width: 100%;
+    height: 12em;
+    align-items: start;
+  }
+
+  .sidebar a {
+    width: 14em;
+  }
+
+  .sidebar-links {
+    gap: 2em;
+    margin-top: 2em;
+  }
+
+  .form {
+    display: flex;
+    justify-content: start;
+  }
+
+  .button-container {
+    margin: 1em;
+  }
+
+  .input-container {
+    padding: 0.5em 1.5em;
+  }
+}
