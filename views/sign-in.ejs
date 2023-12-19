@@ -16,10 +16,11 @@
     <%- include("./partials/navbar") %>
     <div class="main-container">
       <div class="fields-and-links">
-        <!-- if err -->
-        
+        <% if(locals.error){ %>
+        <h3><%= error %></h3>
+        <% } %>
         <h1>Sign in</h1>
-        <form action="">
+        <form action="/signIn" method="post">
           <div class="fields">
             <div class="label-input">
               <label for="email">Email</label>
@@ -31,7 +32,7 @@
               <input type="text" name="password" id="password" />
             </div>
           </div>
-          <button href="#" class="sign-in-button">Sign in</button>
+          <button href="#" type="submit" class="sign-in-button">Sign in</button>
         </form>
 
         <div class="links">
