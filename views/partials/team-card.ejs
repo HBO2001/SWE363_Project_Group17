@@ -1,16 +1,19 @@
 <div class="team-card">
   <div class="team-info-wrapper">
     <!-- team.name -->
-    <h2>Team name</h2>
+    <h2>Team Project: <%= team.name %></h2>
     <!-- avaialble seats -->
-    <h2>Avaialble seats</h2>
+    <h2>Avaialble seats : <%= team.seats %></h2>
   </div>
 
   <div class="team-card-buttons">
     <!-- if loggedIn -->
-    <form action="POST">
+    <% if(locals.currentUser !== null) { %>
+    <form action="/requestJoin" method="post">
+      <input  id="teamId" name="teamId" value="<%= team.id %>" type="hidden" >
       <button>Request Join</button>
     </form>
+    <% } %>
     <!-- <a href="#">More Information</a> -->
   </div>
 </div>
