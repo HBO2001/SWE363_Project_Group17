@@ -8,41 +8,49 @@
     <link rel="stylesheet" href="/stylesheets/my-team.css" />
   </head>
   <body>
-    <%- include("./partials/navbar") %>
+    <%- include("./partials/navbar", {currentUser: currentUser}) %>
 
     <div class="main-container">
-      <%- include("./partials/profile-sidebar", {links: ["Profile", "My Team"]})
-      %>
+      
+      <% if(locals.error) { %>
+        <h1><%= error %></h1>
+      <% } else { %>
 
       <div class="team-container">
         <!-- if (haveTeam) -->
-
+        
+          
         <div class="team-info">
           s
           <div>
-            <h1>The name of the team goes here</h1>
+            <h1><%= team.name %></h1>
 
             <h2>Members:</h2>
             <ul class="members-names">
               <!-- Should be a for loop here when passing the team object -->
-              <li>Ahmed ahmed ahmed</li>
-              <li>Ahmed Ahmed Ahmed</li>
-              <li>Ahmed Ahmed Ahmed</li>
-              <li>Ahmed Ahmed Ahmed</li>
+              <% for(let name of names) { %>
+                <li><%= name.name %></li>
+            <% } %>
             </ul>
           </div>
-
-          <%- include("./partials/request-card") %>
+          <h1>Requests: </h1>
+          <div class="requests">
+          <% for(let request of requests) { %>
+            <%- include("./partials/request-card", { request: request }) %>
+        <% } %>
+      </div>
         </div>
         <div>
-          <h2>Description</h2>
+          <h2>Project Description: </h2>
           <p>
-            <!-- <%= //description %> -->
+            <%= team.projectdescription %>
           </p>
         </div>
         <div class="team-buttons">
-          <form action="">
-            <button class="leave-team-button">Leave this team?</button>
+          <form action="/leaveTeam" method="post">
+            <input type="hidden" name="email" id="email" value="<%= currentUser %>">
+            <input type="hidden" name="teamid" id="teamid" value="<%= team.id %>">
+            <button class="leave-team-button" type="submit">Leave this team?</button>
           </form>
         </div>
         <!-- else error -->
@@ -50,6 +58,7 @@
           <h1>You are not in a team yet</h1>
         </div> -->
       </div>
+      <% } %>
     </div>
     <script src="/javascripts/navbar.js"></script>
   </body>
