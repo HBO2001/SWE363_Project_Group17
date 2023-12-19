@@ -12,13 +12,20 @@
     <div class="main-container">
       <%- include("./partials/admin-sidebar") %>
       <div class="profile-info">
-        <form action="">
+        <% if(locals.error){ %>
+          <h3><%= error %></h3>
+          <% } %>
+          <% if(locals.message){ %>
+            <h3><%= message %></h3>
+            <% } %>
+        <form action="/adminDeleteStudent" method="post">
           <div class="input-container">
+           
             <div class="label-input">
               <label for="email">Email</label>
               <input type="email" name="email" id="email" />
               <div class="button-container">
-                <button>Delete Student</button>
+                <button type="submit">Delete Student</button>
               </div>
             </div>
           </div>
