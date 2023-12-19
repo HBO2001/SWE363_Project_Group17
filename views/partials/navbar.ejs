@@ -27,17 +27,23 @@
 
       <!-- currentUser should be passed in to check whether to display the buttons or not -->
       <!-- <% //if (currentUser) { %>  -->
-
-      <div class="nav-buttons">
-        <a href="/sign-in" class="sign-in-button">Sign in</a>
-        <a href="/sign-up" class="sign-up-button">Sign up</a>
-      </div>
-      <!-- <% //} else { %>
+       
+      
+        <% if (!currentUser) { %>
+          <div class="nav-buttons">
+            <a href="/sign-in" class="sign-in-button">Sign in</a>
+            <a href="/sign-up" class="sign-up-button">Sign up</a>
+          </div>
+        <% } else { %>
+          <ul class="nav-links2">
+          <a href="/SWE363_Project_Group17/views/profile.ejs">Profile</a>
+          <a href="/my-team">My Team</a>
+          <a href="/home_logout">Logout</a>
+        </ul>
+        <% } %>
         
-      <% //} %> -->
-
-      <a href="/members/profile">Profile</a>
-      <a href="/members/myTeams/">My Team</a>
+        
+      
     </nav>
 
     <svg
