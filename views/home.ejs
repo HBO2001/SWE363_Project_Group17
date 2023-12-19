@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/stylesheets/home.css" />
   </head>
   <body>
-    <%- include("./partials/navbar") %>
+    <%- include("./partials/navbar", {currentUser: currentUser}) %>
+    
     <div class="main-container">
       <div class="heading-and-subheading">
         <h1>Simplifying Student Collaboration at KFUPM</h1>
