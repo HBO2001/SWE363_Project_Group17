@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="/stylesheets/profile.css" />
   </head>
   <body>
-    <%- include("./partials/navbar") %>
+    <%- include("./partials/navbar", {currentUser: currentUser}) %>
 
     <div class="main-container">
       <%- include("./partials/profile-sidebar") %>
       <div class="profile-info">
-        <form action="">
+        <% if(locals.error){ %>
+          <h3><%= error %></h3>
+          <% } %>
+        <form action="/updateProfile" method="post">
           <div class="input-container">
             <div class="label-input">
               <label for="name">Name</label>
@@ -21,7 +24,7 @@
                 type="name"
                 name="name"
                 id="name"
-                value="replace the value here with the real object value"
+                value="<%= student.name %>"
               />
             </div>
             <div class="label-input">
@@ -30,21 +33,22 @@
                 type="email"
                 name="email"
                 id="email"
-                value="replace the value here with the real object value"
+                value="<%= student.email %>"
               />
             </div>
             <div class="label-input">
-              <label for="major">Major</label>
+              <!-- <label for="major">Major</label> -->
+              <p>Major: <%= student.major %></p>
               <input
-                type="major"
+                type="hidden"
                 name="major"
                 id="major"
-                value="replace the value here with the real object value"
+                value="student.major"
               />
             </div>
           </div>
           <div class="button-container">
-            <button>Edit profile</button>
+            <button class="submit">Edit profile</button>
           </div>
         </form>
       </div>
