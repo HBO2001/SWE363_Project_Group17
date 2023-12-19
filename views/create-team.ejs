@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="/stylesheets/create-team.css" />
   </head>
   <body>
-    <%- include("./partials/navbar") %>
+    <%- include("./partials/navbar", {currentUser: currentUser}) %>
     <div class="main-container">
       <div class="fields-and-links">
         <h1>Create your team</h1>
-        <form action="">
+        <form action="/createTeam" method="post">
           <div class="fields">
             <!-- <div class="label-input">
               <label for="teamName">Team Name</label>
@@ -23,7 +23,7 @@
             </div>
 
             <div class="label-input">
-              <label for="description">Current description</label>
+              <label for="description">Current description:</label>
               <textarea
                 class="ideas"
                 name="description"
@@ -33,9 +33,11 @@
               ></textarea>
             </div>
           </div>
-          <form action="">
-            <button class="create-team-button">Create Team</button>
-          </form>
+            
+            <button class="create-team-button" type="submit">Create Team</button>
+            <% if(locals.error){ %>
+              <h3><%= error %></h3>
+              <% } %>
         </form>
       </div>
 
