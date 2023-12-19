@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/stylesheets/teams.css" />
   </head>
   <body>
-    <%- include("./partials/navbar") %>
+    <%- include("./partials/navbar", currentUser) %>
 
     <div class="main-wrapper">
       <!-- <div class="search-wrapper">
@@ -51,11 +51,13 @@
           </svg> -->
 
           <!-- if else -->
-          <a href="/create-team">Creat Team</a>
+          <a href="/create_team">Creat Team</a>
         </div>
       </div>
-
-      <% //for..... %> <%- include("./partials/team-card") %>
+      
+      <% for(let team of teams) { %>
+        <%- include("./partials/team-card", { team: team }) %>
+    <% } %>
     </div>
 
     <script src="/javascripts/navbar.js"></script>
